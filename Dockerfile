@@ -1,5 +1,5 @@
 # Set the base image
-FROM node:boron-alpine
+FROM node:alpine
 
 # Set the Working directory
 WORKDIR /home/application
@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 3000
 
 # Start the application
-CMD [ "npm", "run start:"$FLIGHTS_CACHE_ADMIN_PROFILE ]
+CMD [ "npm run start:"$FLIGHTS_CACHE_ADMIN_PROFILE]
+thegr81
