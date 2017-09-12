@@ -5,7 +5,7 @@ FROM node:alpine
 WORKDIR /home/application
 
 # Copy depencency manager file
-COPY package.json .
+COPY yarn.lock .
 
 # Install dependencies
 RUN yarn install
