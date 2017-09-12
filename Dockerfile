@@ -1,5 +1,5 @@
 # Set the base image
-FROM node:boron
+FROM node:alpine
 
 # Set the Working directory
 WORKDIR /home/application
@@ -7,6 +7,7 @@ WORKDIR /home/application
 # Copy depencency manager file
 COPY package.json .
 COPY yarn.lock .
+COPY ./internals .
 
 # Install dependencies
 RUN yarn install
