@@ -12,9 +12,6 @@ jobs:
       - checkout
 
       - setup_remote_docker
-
-      - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: Installing Packages
           command: yarn install
