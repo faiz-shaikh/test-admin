@@ -23,9 +23,9 @@ jobs:
           paths:
             - ./node_modules
 
-      - run:
-          name: Running Unit Tests
-          command: npm test
+      #- run:
+       #   name: Running Unit Tests
+        #  command: npm test
 
       - run:
           name: Building Docker Image
