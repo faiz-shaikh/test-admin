@@ -8,9 +8,7 @@ WORKDIR /home/application
 COPY package.json .
 
 # Install dependencies
-RUN npm install -g -s --no-progress yarn && \
-    yarn && \
-    yarn cache clean
+RUN yarn install --production
 
 # Bundle application source
 COPY . .
