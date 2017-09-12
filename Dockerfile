@@ -6,13 +6,12 @@ WORKDIR /home/application
 
 # Copy depencency manager file
 COPY package.json .
-COPY yarn.lock .
 
 # Install dependencies
 RUN npm install
 
 # Bundle application source
-COPY ./build .
+COPY . .
 
 # Expose 3000 port
 EXPOSE 3000
