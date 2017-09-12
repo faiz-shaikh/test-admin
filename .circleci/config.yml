@@ -16,20 +16,20 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
-          name: Installing Packages
+          name: Installing Node Packages
           command: yarn install
       - save_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache/yarn
+            - ./node_modules
 
       - run:
           name: Running Unit Tests
-          command: yarn test
+          command: npm test
 
       - run:
           name: Creating a Build
-          command: yarn run build
+          command: npm run build
 
       - run:
           name: Building Docker Image
