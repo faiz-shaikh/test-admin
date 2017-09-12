@@ -5,7 +5,7 @@ FROM node:alpine
 WORKDIR /home/application
 
 # Copy depencency manager file
-#COPY package.json .
+COPY package.json .
 
 # Install dependencies
 RUN npm install cross-env
