@@ -7,7 +7,6 @@ WORKDIR /home/application
 # Copy depencency manager file
 COPY package.json .
 COPY yarn.lock .
-COPY ./internals .
 
 # Install dependencies
 RUN yarn install

@@ -25,11 +25,11 @@ jobs:
 
       - run:
           name: Running Unit Tests
-          command: npm test
+          command: yarn test
 
       - run:
           name: Creating a Build
-          command: npm run build
+          command: yarn run build
 
       - run:
           name: Building Docker Image
