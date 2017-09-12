@@ -1,5 +1,5 @@
 # Set the base image
-FROM node:alpine
+FROM node:boron
 
 # Set the Working directory
 WORKDIR /home/application
