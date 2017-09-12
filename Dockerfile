@@ -8,8 +8,11 @@ WORKDIR /home/application
 COPY package.json .
 COPY yarn.lock .
 
+# Install yarn!
+RUN npm install yarn -g
+
 # Install dependencies
-RUN NODE_ENV=development yarn install
+RUN yarn install
 
 # Bundle application source
 COPY . .
