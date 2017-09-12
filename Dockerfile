@@ -11,7 +11,7 @@ COPY package.json .
 RUN npm install
 
 # Bundle application source
-COPY ./build .
+COPY . .
 
 # Expose 3000 port
 EXPOSE 3000
