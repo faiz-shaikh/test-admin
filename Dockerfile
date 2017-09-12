@@ -8,10 +8,10 @@ WORKDIR /home/application
 COPY package.json .
 
 # Install dependencies
-RUN yarn install --production
+RUN npm install
 
 # Bundle application source
-COPY . .
+COPY ./build .
 
 # Expose 3000 port
 EXPOSE 3000
