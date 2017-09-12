@@ -7,18 +7,21 @@ jobs:
 
     working_directory: ~/flights_cache_admin
 
-    dependencies:
-      override:
-        - yarn
-      cache_directories:
-        - ~/.cache/yarn
-
     steps:
 
       - checkout
 
       - setup_remote_docker
 
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Installing Node Packages
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
 
       - run:
           name: Running Unit Tests
