@@ -7,17 +7,18 @@ jobs:
 
     working_directory: ~/flights_cache_admin
 
+    dependencies:
+      override:
+        - yarn
+      cache_directories:
+        - ~/.cache/yarn
+
     steps:
 
       - checkout
 
       - setup_remote_docker
 
-      - dependencies:
-         override:
-          - yarn
-        cache_directories:
-          - ~/.cache/yarn
 
       - run:
           name: Running Unit Tests
