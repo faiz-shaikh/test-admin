@@ -8,7 +8,7 @@ WORKDIR /home/application
 COPY package.json .
 
 # Install dependencies
-RUN npm install
+#RUN npm install
 
 # Bundle application source
 COPY . .
