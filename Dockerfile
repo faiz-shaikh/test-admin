@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the application
-CMD [ "echo:$FLIGHTS_CACHE_ADMIN_PROFILE" ]
+CMD [ "echo", "$FLIGHTS_CACHE_ADMIN_PROFILE" ]
