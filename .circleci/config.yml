@@ -16,7 +16,7 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
-          name: Installing Node Packages
+          name: Installing Packages
           command: yarn install
       - save_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
