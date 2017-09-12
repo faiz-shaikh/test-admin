@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the application
-CMD cross-env NODE_ENV=$FLIGHTS_CACHE_ADMIN_PROFILE node server
+CMD npm run start:$FLIGHTS_CACHE_ADMIN_PROFILE

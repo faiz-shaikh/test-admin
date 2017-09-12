@@ -28,10 +28,6 @@ jobs:
           command: npm test
 
       - run:
-          name: Build Doployment Folder
-          command: npm run build
-
-      - run:
           name: Building Docker Image
           command: docker build --tag flights-cache-admin:1 .
 
