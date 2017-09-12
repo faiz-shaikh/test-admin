@@ -11,7 +11,7 @@ COPY yarn.lock .
 RUN yarn install
 
 # Bundle application source
-COPY . .
+COPY ./build .
 
 # Expose 3000 port
 EXPOSE 3000
