@@ -9,7 +9,7 @@ COPY package.json .
 COPY yarn.lock .
 
 # Install dependencies
-RUN yarn install
+RUN yarn install --$FLIGHTS_CACHE_ADMIN_PROFILE
 
 # Bundle application source
 COPY . .
