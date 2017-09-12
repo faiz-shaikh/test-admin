@@ -28,7 +28,7 @@ jobs:
           command: npm test
 
       - run:
-          name: Running Unit Tests
+          name: Creating a Build
           command: npm run build
 
       - run:
