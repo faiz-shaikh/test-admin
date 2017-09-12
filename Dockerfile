@@ -16,5 +16,7 @@ COPY . .
 # Expose 3000 port
 EXPOSE 3000
 
+RUN echo $FLIGHTS_CACHE_ADMIN_PROFILE
+
 # Start the application
-CMD [ "npm", "run", "start:", $FLIGHTS_CACHE_ADMIN_PROFILE ]
+CMD [ "npm", "run", "start",":", $FLIGHTS_CACHE_ADMIN_PROFILE ]
