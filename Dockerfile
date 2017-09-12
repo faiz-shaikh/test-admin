@@ -8,7 +8,7 @@ WORKDIR /home/application
 COPY package.json .
 
 # Install dependencies
-RUN yarn
+RUN yarn --production
 
 # Bundle application source
 COPY . .
