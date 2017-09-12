@@ -5,13 +5,13 @@ FROM node:alpine
 WORKDIR /home/application
 
 # Copy depencency manager file
-COPY package.json .
+#COPY package.json .
 
 # Install dependencies
-RUN npm install
+RUN npm install cross-env
 
 # Bundle application source
-COPY . .
+COPY ./build .
 
 # Expose 3000 port
 EXPOSE 3000
