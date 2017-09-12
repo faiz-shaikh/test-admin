@@ -9,7 +9,7 @@ COPY package.json .
 COPY yarn.lock .
 
 # Install dependencies
-RUN yarn install --$FLIGHTS_CACHE_ADMIN_PROFILE
+RUN NODE_ENV=development yarn install
 
 # Bundle application source
 COPY . .
