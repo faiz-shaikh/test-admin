@@ -6,13 +6,9 @@ WORKDIR /home/application
 
 # Copy depencency manager file
 COPY package.json .
-COPY yarn.lock .
-
-# Install yarn!
-RUN npm install yarn -g
 
 # Install dependencies
-RUN yarn install
+RUN npm install
 
 # Bundle application source
 COPY . .
