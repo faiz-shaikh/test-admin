@@ -35,10 +35,6 @@ jobs:
           name: Building Docker Image
           command: docker build --tag flights-cache-admin:1 .
 
-      - run:
-          name: Run Docker Image
-          command: docker run -p 3000:3000 -e FLIGHTS_CACHE_ADMIN_PROFILE=production flights-cache-admin:1
-
 workflows:
   version: 2
   build-and-deploy:
